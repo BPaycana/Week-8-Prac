@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float strafeSpeed = 1.0f;
     private bool _thrusting;
     private Rigidbody _rigidbody;
+    private Collider col;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,5 +64,10 @@ public class Player : MonoBehaviour
             transform.position += (Vector3.right * Time.deltaTime) * strafeSpeed;
         }
 
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        Scorekeeper.instance.AddPoint();
     }
 }
