@@ -24,13 +24,16 @@ public class Scorekeeper : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    public void AddPoint()
+    {
+        score += 1;
+        scoreText.text = "Score: " + score.ToString();
+    }
+
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            score += 1;
-            scoreText.text = "Score: " + score.ToString();
-        }
+
     }
 
 }
