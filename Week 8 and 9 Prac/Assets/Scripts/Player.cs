@@ -65,9 +65,4 @@ public class Player : MonoBehaviour
         }
 
     }
-
-    void OnTriggerEnter(Collider col)
-    {
-        Scorekeeper.instance.AddPoint();
-    }
 }
