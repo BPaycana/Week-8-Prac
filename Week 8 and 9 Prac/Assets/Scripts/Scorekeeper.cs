@@ -22,8 +22,8 @@ public class Scorekeeper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText1.text = "Score: " + score.ToString();
-        //scoreText2.text = "Score: " + score.ToString();
+        scoreText1.text = "Player 1 Score: " + score.ToString();
+        scoreText2.text = "Player 2 Score: " + score.ToString();
     }
 
     // Update is called once per frame
@@ -31,13 +31,13 @@ public class Scorekeeper : MonoBehaviour
     public void AddPoint()
     {
         score += 1;
-        scoreText1.text = "Score: " + score.ToString();
+        scoreText1.text = "Player 1 Score: " + score.ToString();
     }
 
     public void AddPoint2()
     {
         score += 1;
-        scoreText2.text = "Score: " + score.ToString();
+        scoreText2.text = "Player 2 Score: " + score.ToString();
     }
 
     void Update()
